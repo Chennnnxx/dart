@@ -245,9 +245,11 @@ function setHttpResponseHeaders(req, res, next) {
     next();
 }
 
-function isValidModId(req, res, next) {
+function isValidModId(req, res, next) {//intro#mod:id
     const modIds = [
-        "cyberbullying"
+        "cyberbullying",
+        "new_module",
+        "account"
     ]
     if (modIds.includes(req.params.modId)) {
         next();
@@ -291,7 +293,9 @@ const enableLearnerDashboard = process.env.enableLearnerDashboard === 'true';
 
 function isValidModId(req, res, next) {
     const modIds = [
-        "cyberbullying"
+        "cyberbullying",
+        "new_module",
+        "account"
     ]
 
     if (modIds.includes(req.params.modId)) {
@@ -346,6 +350,16 @@ app.get('/intro/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders,
         res.redirect('/');
     } else {
         res.render('base_intro.pug', {
+            title: 'Welcome'
+        });
+    }
+});
+
+app.get('/hello/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
+    if (req.params.modId === "delete") { // anticipating a specific user behavior that causes 500 errors
+        res.redirect('/');
+    } else {
+        res.render('new_module/new_module.pug', {
             title: 'Welcome'
         });
     }
