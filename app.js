@@ -248,7 +248,7 @@ function setHttpResponseHeaders(req, res, next) {
 function isValidModId(req, res, next) {//intro#mod:id
     const modIds = [
         "cyberbullying",
-        "new_module",
+        "spot_the_troll",
         "account"
     ]
     if (modIds.includes(req.params.modId)) {
@@ -294,7 +294,7 @@ const enableLearnerDashboard = process.env.enableLearnerDashboard === 'true';
 function isValidModId(req, res, next) {
     const modIds = [
         "cyberbullying",
-        "new_module",
+        "spot_the_troll",
         "account"
     ]
 
@@ -355,15 +355,47 @@ app.get('/intro/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders,
     }
 });
 
-app.get('/hello/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
+app.get('/power_to_women/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
     if (req.params.modId === "delete") { // anticipating a specific user behavior that causes 500 errors
         res.redirect('/');
     } else {
-        res.render('new_module/new_module.pug', {
+        res.render('spot_the_troll/power_women.pug', {
             title: 'Welcome'
         });
     }
 });
+
+app.get('/HarmonyAnderson/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
+    if (req.params.modId === "delete") { // anticipating a specific user behavior that causes 500 errors
+        res.redirect('/');
+    } else {
+        res.render('spot_the_troll/HarmonyAnderson.pug', {
+            title: 'Welcome'
+        });
+    }
+});
+
+app.get('/ChloeEvan/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
+    if (req.params.modId === "delete") { // anticipating a specific user behavior that causes 500 errors
+        res.redirect('/');
+    } else {
+        res.render('spot_the_troll/ChloeEvan.pug', {
+            title: 'Welcome'
+        });
+    }
+});
+
+app.get('/Christopher/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
+    if (req.params.modId === "delete") { // anticipating a specific user behavior that causes 500 errors
+        res.redirect('/');
+    } else {
+        res.render('spot_the_troll/Christopher.pug', {
+            title: 'Welcome'
+        });
+    }
+});
+
+
 
 // Render user's profile page, which is module-specific.
 app.get('/me/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, userController.getMe);

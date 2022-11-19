@@ -16,14 +16,24 @@ block content
   - var bio = "Student"
   - var location = "Atlanta"
   - var join_date = "June 2014"
+    //-####################### navbar
+    .topnav(style='width:100%')
+      a.active(href='javascript:void(0);' onclick='myFunction()') H
+      #myLinks
+        a(href='/Christopher/spot_the_troll') Christopher
+        a(href='/power_to_women/spot_the_troll') power_to_women
+        a(href='/HarmonyAnderson/spot_the_troll') HarmonyAnderson
+        a(href='/ChloeEvan/spot_the_troll') ChloeEvan
+      a.icon(href='javascript:void(0);' onclick='myFunction()') 
+        i.fa.fa-bars  &nbsp   &nbsp  Switch Twitter Profile
     //-####################### title
     .ui.fluid.card.dim(style = "margin-bottom:0px")
       .profile_title(style='position: relative; top: 0; left: 0; ')
-       img(style='width:100%; z-index: 0;position: relative;\
+       img(style='width:100%; height:400px; z-index: 0;position: relative;\
   top: 0;\
   left: 0;\
   solid; z-index = -1' src=background_pic)
-       img(style='border-radius: 50%; width:30%; z-index: 2; position: absolute;\
+       img(style='border-radius: 50%; width:20%; z-index: 2; position: absolute;\
   top: 55%;\
   left: 3%;\
   border: 4px white solid;z-index: 1' src=profile_pic)
@@ -108,7 +118,7 @@ block content
         .description 
           .br !{post_content_2}
       .img.post
-        img(src=post_pic_2)
+        img(src=post_pic_2 style=' width:100%;')
       .three.ui.bottom.attached.icon.buttons
         .ui.reply.button(tabindex='0')
           i.reply.icon
@@ -130,3 +140,8 @@ block content
 
 block scripts
   script(src='/postFunctionalities.js')
+  script(src='/NavBar.js')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+block styles
+  link(rel='stylesheet', href = '/css/NavBar/NavBar.css')

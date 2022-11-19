@@ -2,20 +2,30 @@
 extends ../ui_layout
 
 block content
-  -var profile_pic = "/profile_pictures/power_woman.jpg"
+  -var profile_pic = "/profile_pictures/chloe.jpg"
   -var background_pic = "/profile_pictures/chloe4.jpg"
-  -var post_pic_1 = "/profile_pictures/power_women_post1.jpg"
-  - var post_content_1 = "Share this 'violent or graphic' photo everywhere and tell Zuckerberg to such it!"
-  - var post_date_1 = "May 23, 2020"
-  -var post_pic_2 = "/profile_pictures/power_women_post2.jpg"
-  - var post_content_2 = ""
-  - var post_date_2 = "May 3, 2020"
+  -var post_pic_1 = "/profile_pictures/chloe2.jpg"
+  - var post_content_1 = "This is all going to hell. #DeadHorse"
+  - var post_date_1 = "Sep 11, 2014"
+  -var post_pic_2 = "/profile_pictures/chloe3.jpg"
+  - var post_content_2 = "But who’s responsible? Obama? #DeadHorse #ChemicalAccidentLouisiana"
+  - var post_date_2 = "Sep 11, 2014"
   -var cdn = "https://dhpd030vnpk29.cloudfront.net";
-  -var user_name = "power_to_women_"
-  - var user_id = ""
-  - var bio = "American Feminist"
-  - var location = "She needed a hero, so that's what she became!"
-  - var join_date = "June 2019"
+  -var user_name = "Chloe Evans"
+  - var user_id = "@ChloeEva12"
+  - var bio = "Student"
+  - var location = "Atlanta"
+  - var join_date = "June 2014"
+    //-####################### navbar
+    .topnav(style='width:100%')
+      a.active(href='javascript:void(0);' onclick='myFunction()') H
+      #myLinks
+        a(href='/Christopher/spot_the_troll') Christopher
+        a(href='/power_to_women/spot_the_troll') power_to_women
+        a(href='/HarmonyAnderson/spot_the_troll') HarmonyAnderson
+        a(href='/ChloeEvan/spot_the_troll') ChloeEvan
+      a.icon(href='javascript:void(0);' onclick='myFunction()') 
+        i.fa.fa-bars  &nbsp   &nbsp  Switch Twitter Profile
     //-####################### title
     .ui.fluid.card.dim(style = "margin-bottom:0px")
       .profile_title(style='position: relative; top: 0; left: 0; ')
@@ -108,7 +118,7 @@ block content
         .description 
           .br !{post_content_2}
       .img.post
-        img(style='width:100%' src=post_pic_2)
+        img(src=post_pic_2)
       .three.ui.bottom.attached.icon.buttons
         .ui.reply.button(tabindex='0')
           i.reply.icon
@@ -130,3 +140,51 @@ block content
 
 block scripts
   script(src='/postFunctionalities.js')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  script.
+    function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+    x.style.display = "none";
+    } else {
+    x.style.display = "block";
+    }
+    }
+  style.
+    /* Style the navigation menu */
+    .topnav {
+    overflow: hidden;
+    background-color: #dfe1e3;
+    position: relative;
+    }
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+    display: none;
+    }
+    /* Style navigation menu links */
+    .topnav a {
+    color: #6e6f71;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    }
+    /* Style the hamburger menu */
+    .topnav a.icon {
+    width:100%;
+    background: #dfe1e3;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+    background-color: #ddd;
+    color: #767671;
+    }
+    /* Style the active link (or home/logo) */
+    .active {
+    color: #6e6f71;
+    }
+
