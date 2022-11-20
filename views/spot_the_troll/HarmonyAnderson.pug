@@ -5,7 +5,8 @@ block content
 
   -var cdn = "https://dhpd030vnpk29.cloudfront.net";
     //-####################### navbar
-    .topnav(style='width:100%')
+    #step1.ui.fluid.card.test  
+     .topnav(style='width:100%')
       a.active(href='javascript:void(0);' onclick='myFunction()') H
       #myLinks
         a(href='/Christopher/spot_the_troll') Christopher
@@ -15,23 +16,24 @@ block content
       a.icon(href='javascript:void(0);' onclick='myFunction()') 
         i.fa.fa-bars  &nbsp   &nbsp  Switch Twitter Profile
     //-####################### title
-    .ui.fluid.card.dim(style = "margin-top:0px;margin-bottom:0px")
+    #step2.ui.fluid.card.test  
+     .ui.fluid.card.dim(style = "margin-top:0px;margin-bottom:0px")
       .profile_title(style='position: relative; top: 0; left: 0; ')
-       img(style='width:100%;height:400px; z-index: 0;position: relative;\
+       img(style='width:100%;height:80%; z-index: 0;position: relative;\
   top: 0;\
   left: 0;\
   solid; z-index = -1' src='/profile_pictures/Z-backgoundAndres.jpg')
        img(style='border-radius: 50%; width:20%; z-index: 2; position: absolute;\
-  top: 55%;\
+  top: 65%;\
   left: 3%;\
   border: 4px white solid;z-index: 1' src='/profile_pictures/user81.jpg')
-      .bio(style=' width:100%;\
- padding-left: 25px; margin-top: 4%;z-index: 1')
-          .ui.button(style='float: right;margin-right: 25px;')
+      .bio(style=' width:100%;padding-left: 25px; margin-top: 0%;z-index: 1')
+          .ui.button(style='margin-top: 0%;float: right;margin-right: 25px;')
               | follow
           .br  Harmony Anderson 
           .br  @HarmonyAnders
-          .br  The college girl who managed to stay conservative #prolife #pro2A #AmericaFirst This is my 2nd account where I share my political and social views
+          .br  The college girl who managed to stay conservative #prolife #pro2A #AmericaFirst 
+          .br This is my 2nd account where I share my political and social views
           .br  Ankeny, Iowa
           .br Joined September 2019
       .three.ui.bottom.attached.icon.buttons
@@ -43,7 +45,8 @@ block content
           .ui.like.button
             | Likes
     //-####################### first
-    .ui.fluid.card.dim(style ="margin-top:0px;margin-bottom:0px")
+    #step3.ui.fluid.card.test  
+     .ui.fluid.card.dim(style ="margin-top:0px;margin-bottom:0px")
       .ui.dimmer.flag
         .content
           .center
@@ -60,8 +63,8 @@ block content
               img.ui.avatar.image(src='/profile_pictures/user81.jpg')
               span='Harmony Anderson'
               .br &nbsp  &nbsp &nbsp &nbsp &nbsp @HarmonyAnders
-      .content
-        .description 
+      a.content
+         .description 
           .br Pennsylvania voter rolls near Pittsburgh are full of inaccuracies:
           .br —1,583 dead people registered to vote
           .br —7,500 flagged as duplicate voters
@@ -171,6 +174,10 @@ block scripts
   script(src='/NavBar.js')
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
   .style 
+  script(src="/module_js/spot_the_troll/spot_the_troll_tur.js")
+  script(src="/module_js/base_introSteps.js")
+  .script 
   
 block styles
   link(rel='stylesheet', href = '/css/NavBar/NavBar.css')
+  

@@ -3,7 +3,7 @@ const nextPageURL = 'tut_guide';
 const stepsList = [
   {
     element: '#step1',
-    intro: `Click "Next" to begin!`,
+    intro: `Click "Next" to begin!!!!`,
     position: 'right',
     scrollTo: 'tooltip',
     audioFile: ['']
@@ -35,7 +35,7 @@ const stepsList = [
     audioFile: ['CUSML.6.3.3.mp3']
   },
   {
-    element: 'a.flag',
+    element: 'a.like',
     intro: `One way you can act against cyberbullying is by pressing the
     <b>“Flag”</b> button.`,
     position: 'right',
