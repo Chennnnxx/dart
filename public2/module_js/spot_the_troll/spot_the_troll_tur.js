@@ -1,4 +1,4 @@
-const nextPageURL = 'tut_guide';
+const nextPageURL = 'power_to_women';
 
 const stepsList = [
   {
