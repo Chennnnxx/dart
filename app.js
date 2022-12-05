@@ -355,11 +355,11 @@ app.get('/intro/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders,
     }
 });
 
-app.get('/power_to_women/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
+app.get('/Saeed_Ahmed/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
     if (req.params.modId === "delete") { // anticipating a specific user behavior that causes 500 errors
         res.redirect('/');
     } else {
-        res.render('spot_the_troll/power_women.pug', {
+        res.render('spot_the_troll/Saeed_Ahmed.pug', {
             title: 'Welcome'
         });
     }
