@@ -167,7 +167,8 @@ block content
       .modal-content
             .ui.centered.cards
               .card
-                .content
+                .content(style = "position: relative")
+                 .exp
                   img.right.floated.medium.ui.image(style='border-radius: 50%;' src='/profile_pictures/user81.jpg')
                   .header
                     | Harmony Anderson
@@ -179,23 +180,40 @@ block content
                     .ui.basic.green.button(style=' width: 32%;' onclick = "window.location.href= '/Saeed_Ahmed/spot_the_troll'") Accept
                     .ui.red.button(style=' width: 32%;' onclick = "window.location.href= '/Saeed_Ahmed/spot_the_troll'") Decline
                     .ui.outline.button(style=' width:32%;' onclick='unhide_()') Report
-                    .exp1
-                      p 
-                      | why you think this user is a troll: 
-                      .ui.input
-                        input(type='text', name='title', value='')
-                      .ui.button(style = "width:29%;margin:2px",type='submit', value='Submit' onclick="window.location.href= '/Saeed_Ahmed/spot_the_troll'") Submit
-    
+                  .exp1
+                    .btn-group2(style = "position:absolute;top: 6%; z-index: 1;width:91%")
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") It's a spam
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;")  Nudity or sexual activity
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") Hate speech or symbols
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") False information
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") I just don't like it
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") Bullying or harassment
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") Scam or fraud
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") Violance
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") Terrorism
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") Suicide or self-injury
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") Unauthorized sales
+                       button(onclick='unhide()' style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") Child Abuse   
+                       button(onclick = "window.location.href= '/Saeed_Ahmed/spot_the_troll'" style = "text-align:left;font-family: 'Lucida Console', 'Courier New', monospace;") Nah... Let's go next.
+                    p(style = "position:absolute;font-weight:bold;top: 2%; z-index: 1;font-family: 'Arial', 'Helvetica', sans-serif;")
+                      | why are you reporting this post?
+                    .p 
+                      | &nbsp
+                  .exp2
+                    img(src ='/profile_pictures/report_msg.png' style = "position:absolute;top: 20%; z-index: 1;width:91%" )
+                    .p(style = "text-color: white") 
+                    | &nbsp
+                    .ui.blue.button(style='position:absolute; top: 80%; left:35%; width: 32%;' onclick = "window.location.href= '/Saeed_Ahmed/spot_the_troll'") Next
     .ui.blue.button#myBtn(style = "" ) Next
 block scripts
-  script(src='/postFunctionalities.js')
   script(src='/NavBar.js')
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
   .style 
     link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
   style.
-    .exp{visibility: hidden;}
+    .exp{visibility: visible;}
     .exp1{visibility: hidden;}
+    .exp2{visibility: hidden;}
     /* The Modal (background) */
     .modal {
     display: none; /* Hidden by default */
@@ -249,6 +267,22 @@ block scripts
     .btn-group button:hover {
     background-color: #f0f2f1;
     } 
+    .btn-group2 button {
+    background-color: white; /* Green background */
+    border: 1px solid #f0f2f1; /* Green border */
+    height:30px;
+    color: black; /* White text */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    }
+    .btn-group2 button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+    }
+    /* Add a background color on hover */
+    .btn-group2 button:hover {
+    background-color: #f0f2f1;
+    }
   //-#script(src="/module_js/spot_the_troll/spot_the_troll_tur.js")
   //-#script(src="/module_js/base_introSteps.js")
   //-#script(src="/module_js/voiceover.js")
@@ -258,6 +292,14 @@ block scripts
     function unhide() {
       var hid = document.getElementsByClassName("exp");
       if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "hidden";
+      }
+      var hid = document.getElementsByClassName("exp1");
+      if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "hidden";
+      }
+      var hid = document.getElementsByClassName("exp2");
+      if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
         hid[0].style.visibility = "visible";
       }
        }
@@ -265,6 +307,10 @@ block scripts
       var hid = document.getElementsByClassName("exp1");
       if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
         hid[0].style.visibility = "visible";
+      }
+      var hid = document.getElementsByClassName("exp");
+      if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "hidden";
       }
        }
     var body = document.body,
