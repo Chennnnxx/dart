@@ -375,11 +375,11 @@ app.get('/HarmonyAnderson/:modId', passportConfig.isAuthenticated, setHttpRespon
     }
 });
 
-app.get('/ChloeEvan/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
+app.get('/BlueLiveMatter1/:modId', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, isValidModId, function(req, res) {
     if (req.params.modId === "delete") { // anticipating a specific user behavior that causes 500 errors
         res.redirect('/');
     } else {
-        res.render('spot_the_troll/ChloeEvan.pug', {
+        res.render('spot_the_troll/BlueLiveMatter1.pug', {
             title: 'Welcome'
         });
     }

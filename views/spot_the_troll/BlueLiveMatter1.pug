@@ -3,9 +3,11 @@ extends ../ui_layout
 
 block content
   -var user_post = []
-  -var user_info = [{profile_pic : "/profile_pictures/LDAzIrVA_400x400.jpg",background_pic : "/profile_pictures/1500x500_background.jpg",user_name : "Saeed Ahmed",user_id : "@SaeedAhmed",bio : "Head of digital journalism US @BBC | Ex @NPR @CNN @AJC | Loves:🏃🏾‍♂️🎸📸📚| 🇧🇩🇺🇸| Here to help underrepresented journos: http://calendly.com/ahmed_saeed | he/him",location : "Dhaka-Abu Dhabi-ATL-DC",join_date : "January 2009"}]
-  -user_post.push({post_id:0,post_pic:"/profile_pictures/FiwPsA7XwAEm0TN.jpg",post_content:"If you’re at work and can’t sneak a peak at the #WorldCup2022 games, know that we are live-blogging both #USAvIRN and #ENG v #WAL   Come hang out with us at http://bbc.com",post_date:"Nov 29, 2022"})
-  -user_post.push({post_id:1,post_pic:"/profile_pictures/FhDDo7jWAAAtDZB.jpg",post_content:"It’s #ElectionDay2022",post_date:"Nov 8, 2022"})
+  -var user_info = [{profile_pic : "/profile_pictures/blue_live.jpg",background_pic : "/profile_pictures/blue_live_background.jpg",user_name : "BlueLiveMatter1",user_id : "",bio : "Conservative 🇺🇸 MEGA",location : "NYC",join_date : "August 2018"}]
+  -user_post.push({post_id:0,post_pic:"/profile_pictures/bluelivepost1.jpg",post_content:"Lets stand together",post_date:"Jul 25, 2019"})
+  -user_post.push({post_id:1,post_pic:"/profile_pictures/bluelivepost2.jpg",post_content:"We must all stand together against criminal behavior, for it is only through our collective effort that we can hope to eradicate the evil that plagues our world. By speaking out against wrongdoing and standing up for what is right, we can make a difference and create a safer, more just society for all. Let us be brave and steadfast in our commitment to justice and righteousness, for the sake of a better future for all",post_date:"Nov Apr 27, 2019"})
+  -user_post.push({post_id:1,post_pic:"/profile_pictures/bluelivepost3.jpg",post_content:"Thank you for your service",post_date:"Nov 8, 2022"})
+
   -var cdn = "https://dhpd030vnpk29.cloudfront.net";
     //-####################### title
     .ui.fluid.card.dim(style = "margin-top:0px;margin-bottom:0px")
@@ -81,16 +83,16 @@ block content
               .card
                 .content(style = "position: relative")
                  .exp
-                  img.right.floated.medium.ui.image(style='border-radius: 50%;' src='/profile_pictures/LDAzIrVA_400x400.jpg')
+                  img.right.floated.medium.ui.image(style='border-radius: 50%;' src='/profile_pictures/blue_live.jpg')
                   .header
-                    | Saeed Ahmed
+                    | BlueLiveMatter1
                   .meta
                     | 0 mutual friends
                   .description
-                   | Saeed Ahmed has requested to be your friend
+                   | BlueLiveMatter1 has requested to be your friend
                   .extra.content      
-                    .ui.basic.green.button(style=' width: 32%;' onclick = "window.location.href= '/BlueLiveMatter1/spot_the_troll'") Accept
-                    .ui.red.button(style=' width: 32%;' onclick = "window.location.href= '/BlueLiveMatter1/spot_the_troll'") Decline
+                    .ui.green.button(style=' width: 32%;' onclick = "window.location.href= '/BlueLiveMatter1/spot_the_troll'") Accept
+                    .ui.basic.red.button(style=' width: 32%;' onclick = "window.location.href= '/BlueLiveMatter1/spot_the_troll'") Decline
                     .ui.outline.button(style=' width:32%;' onclick='unhide_()') Report
                   .exp1
                     .btn-group2(style = "position:absolute;top: 30%; z-index: 1;width:91%")
@@ -108,7 +110,7 @@ block content
                     | &nbsp
                     .ui.blue.button(style='position:absolute; top: 80%; left:35%; width: 32%;' onclick = "window.location.href= '/BlueLiveMatter1/spot_the_troll'") Next
   .ui.blue.button#myBtn(style = "" ) Next
-  .ui.blue.button#myBtn(style = "" onclick = "window.location.href= '/HarmonyAnderson/spot_the_troll'") Back
+  .ui.blue.button#myBtn(style = "" onclick = "window.location.href= '/Saeed_Ahmed/spot_the_troll'") Back
 block scripts
   script(src='/NavBar.js')
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
