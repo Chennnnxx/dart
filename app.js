@@ -362,6 +362,12 @@ app.get('/facilitatorHome', passportConfig.isAuthenticated, setHttpResponseHeade
     });
 });
 
+app.get('/studentSelfSignup', passportConfig.isAuthenticated, setHttpResponseHeaders, csrfProtection, addCsrf, function(req, res) {
+    res.render('studentSelfSignup.pug', {
+        title: 'Student Self Signup'
+    });
+});
+
 // Render student login page (all modules)
 app.get('/studentLogin', setHttpResponseHeaders, csrfProtection, addCsrf, function(req, res) {
     res.render('studentLogin.pug', {
@@ -582,7 +588,7 @@ if (isResearchVersion) {
     app.post('/facilitatorLogin', check, setHttpResponseHeaders, csrfProtection, userController.postFacilitatorLogin);
     app.post('/studentLogin', check, setHttpResponseHeaders, csrfProtection, userController.postStudentLogin);
     app.post('/createStudent', check, setHttpResponseHeaders, csrfProtection, userController.postCreateStudent);
-    // app.post('/studentLogin/:accessCode', check, setHttpResponseHeaders, csrfProtection, userController.postStudentLogin);
+    //app.post('/studentLogin/:accessCode', check, setHttpResponseHeaders, csrfProtection, userController.postStudentLogin);
     app.get('/logout', setHttpResponseHeaders, csrfProtection, addCsrf, userController.logout);
 }
 

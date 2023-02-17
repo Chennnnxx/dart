@@ -21,11 +21,6 @@ function makeid(length) {
  * Login page.
  * Route only exists if isResearchVersion = true.
  */
-exports.getLogin = (req, res) => {
-    res.render('account/login', {
-        title: 'Login'
-    });
-};
 
 /**
  * GET /classLogin/:accessCode
