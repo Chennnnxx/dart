@@ -1,3 +1,10 @@
+.wrapper
+  footer.help-outer-container
+    button#help-button Help
+    #help-container
+      #rpg-content
+        img#dartie-img(src='/images/Dartie.png' alt='Happy Dartie the hedgehog character wearing blue')
+        p Great job getting past security! <strong> Click a mission</strong>  to get started!
 .ui.bottom.fixed.small.borderless.menu.testDriveFooter
   .left.menu
     .item
@@ -8,3 +15,12 @@
     a.item(href='/') Terms of Service 
     //- a.item(href='/privacy') Privacy Policy  
     a.item(href='mailto:socialmediatestdrive@gmail.com') Contact Us
+
+block scripts
+  script(src="/js/help.js")
+
+block styles
+  link(rel='stylesheet', href='/css/help.css')  
+
+
+        

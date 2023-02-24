@@ -15,6 +15,7 @@ html
     meta(name="mobile-web-app-capable" content="yes")
     meta(name="msapplication-tap-highlight" content="no")
     meta(name="content-language" content="en_US")
+
     meta(name='twitter:card' content="summary")
     if (process.env.isResearchVersion === "true")
       if (process.env.NODE_ENV === "production")
@@ -40,6 +41,9 @@ html
     link(rel='stylesheet', href=cdn+'/js/lib/introjs.min.css')
     link(type='text/css', rel='stylesheet', href='/css/header.css') 
     link(type='text/css', rel='stylesheet', href='/css/ui_layout.css') 
+    link(type='text/css', rel='stylesheet', href='/css/header.css') 
+    link(type='text/css', rel='stylesheet', href='/css/help.css') 
+
     block styles
 
   body
@@ -54,7 +58,9 @@ html
         .actions(style="text-align:center;")   
           .ui.green.ok.inverted.button
             i.checkmark.icon
-            |   Done                      
+            |   Done       
+      //- img(src="/images/Dartie.png" alt="Dartie" style="width:100px; height:100px;")
+               
     include partials/ui_footer
     
     if process.env.instanceType == 'test'
